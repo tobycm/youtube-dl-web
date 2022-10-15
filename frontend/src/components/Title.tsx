@@ -1,4 +1,4 @@
-import { Box, Link, Paper, useMediaQuery, useTheme, Switch, IconButton } from '@mui/material';
+import { Box, Link, Paper, useMediaQuery, useTheme, IconButton } from '@mui/material';
 import { red } from '@mui/material/colors';
 import Typography from '@mui/material/Typography';
 import React from 'react';

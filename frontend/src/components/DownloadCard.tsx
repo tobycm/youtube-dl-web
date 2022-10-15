@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardHeader, Chip, IconButton, Paper, Tooltip, Typography } from '@mui/material';
+import { Box, Button, Chip, IconButton, Paper, Tooltip, Typography } from '@mui/material';
 import React from 'react';
 import { Format } from '../logic/parseVideo';
 

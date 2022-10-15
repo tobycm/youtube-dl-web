@@ -1,18 +1,18 @@
-import { Accordion, AccordionDetails, AccordionSummary, Alert, AlertTitle, Avatar, Box, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Divider, getIconButtonUtilityClass, IconButton, Link, MenuItem, Select, Stack, Switch, TextField, Tooltip, Typography, useTheme } from '@mui/material';
+import { Accordion, AccordionDetails, AccordionSummary, Alert, AlertTitle, Avatar, Box, Card, CardActions, CardHeader, CardMedia, Divider, Link, MenuItem, Select, Stack, Switch, TextField, Tooltip, Typography, useTheme } from '@mui/material';
 
 import LoadingButton from '@mui/lab/LoadingButton';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import DownloadIcon from "@mui/icons-material/Download";
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
-import { AudioSourceMeta, Format, parseVideoURL, VideoMeta, VideoSourceMeta, VideoURL } from '../logic/parseVideo';
+import { Format, parseVideoURL, VideoMeta, VideoURL } from '../logic/parseVideo';
 import { stringifyNumber } from '../logic/numfmt';
 import FormatCard, { NoneDownloadCard } from './DownloadCard';
-import { download, getDownloadLink } from '../logic/download';
+import { download } from '../logic/download';
 
 export default function DownloadPage({ prefill }: { prefill: string | null }) {
     const theme = useTheme();

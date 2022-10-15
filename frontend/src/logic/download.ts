@@ -44,7 +44,7 @@ export function getDownloadLink(
     videoFrom: Format | "none",
     audioFrom: Format | "none",
 ): string {
-    let f = `/api/dl/${id}?f=`;
+    let f = `/api/dl/${id}?dl_format=`;
 
     if (audioFrom == "none") {
         // only download video
@@ -67,5 +67,5 @@ export function getSubLink(
     subLang: string,
     subFormat: string
 ): string {
-    return `/api/sub/${id}?l=${subLang}&f=${subFormat}`
+    return `/api/sub/${id}?lang=${subLang}&sub_format=${subFormat}`
 }
