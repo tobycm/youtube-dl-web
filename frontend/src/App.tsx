@@ -1,12 +1,8 @@
-import * as React from 'react';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
-import Title from './components/Title';
-import DownloadPage from './components/DownloadPage';
-import { extractIDFromWatchV } from './logic/youtube_endpoint';
-
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import DownloadPage from "./components/DownloadPage";
+import Title from "./components/Title";
+import { extractIDFromUrl } from "./utils";
 
 export default function App() {
   return (
@@ -16,9 +12,7 @@ export default function App() {
       </Box>
 
       <Box sx={{ my: 4 }}>
-        <DownloadPage prefill={
-          extractIDFromWatchV(window.location.href)
-        } />
+        <DownloadPage prefill={extractIDFromUrl(window.location.href)} />
       </Box>
     </Container>
   );
