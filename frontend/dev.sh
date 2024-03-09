@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Build the frontend files in a docker image
+# Run the frontend files with react's watcher
 
 if [[ ! -f $(pwd)/package.json ]]
 then 
@@ -13,4 +13,6 @@ then
     echo "warn: build directory already exists!"
 fi
 
-docker run --rm -v $(pwd):/mnt -w /mnt -u node node:17 sh -c "yarn install; yarn build"
+docker run -it --rm -v $(pwd):/mnt -w /mnt -u node --net host node:17 sh -c "yarn install; yarn start"
+
+# starts on host network port 3000
